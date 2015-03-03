@@ -25,22 +25,33 @@
 				/* background-color:#232; */
 				color:#3c3;
 				margin:0;
-				padding:32px;
-				text-shadow: 0 0 0.2em #3c3;
+				padding:16px 32px;
+				text-shadow: 0 0 0.1em #3c3;
 			}
 			p {
 				font-size:24px;
 				opacity:0.7;
+				margin:16px 0;
 			}
 			h4 {
 				font-size:28px;
 				opacity:0.7;
+				margin:16px 0;
 			}
 			ul {
 				font-size:28px;
 				color:#c33;
 				text-shadow: 0 0 0.2em #c33;
 				opacity:0.7;
+				margin:0;
+			}
+			hr {
+				border-width:0;
+				height:1px;
+				border-bottom:1px solid #3c3;
+				box-shadow: 0 0 0.1em #3c3;
+				margin:32px 0;
+				padding:0;
 			}
 		</style>
 	</head>
@@ -50,6 +61,7 @@
 			request. These requests do not show up in developer consoles and
 			cannot be blocked by browser plugins (AdBlock, Ghostery, etc.).
 		</p>
+		<hr noshade />
 		<h4>Your local IP addresses:</h4>
 		<ul></ul>
 		<h4>Your public IP addresses:</h4>
@@ -154,5 +166,17 @@
 					document.getElementsByTagName("ul")[1].appendChild(li);
 			});
 		</script>
+		<h4>Your browser user agent:</h4>
+		<ul><li id="UserAgent"></li></ul>
+		<hr noshade />
+		<p>a link to torstorm as a way to avoid the risk of any leak with the most confidence</p>
+		<p>a link to prior work on webrtc to give credit for others who have done this work (maybe that's just a forum threaqd link, then?)</p>
+		<p>a link to the repository that holds the .js underlying STUNion test, so people can confirm it is opensource and not doing fucking shady shit</p>
+		<p>a link to the repository holding the torstorm code and configs so it is clear that it's legit and not some info-stealing scam</p>
+		<p>a shout-out to Tor folks for ensuring tor browser bundle is patched up tight against this, w a link to their statement on that</p>
+		<p>and umm... kittens?</p>
+		<p>http://5deqglhxcoy3gbx6.onion/</p>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript">$('#UserAgent').html(navigator.userAgent);</script>
 	</body>
 </html>
