@@ -67,7 +67,7 @@
 		<h1>STUNnion aka stunmbj4vvnuv5pr.onion</h1>
 		<p>
 			When you visit this site, an HTML5 webRTC request is made to a STUN server, asking your web browser to disclose your physical (ISP) address.
-			They're tricksy things, + aren't bloked by the usual no-script or ghostery-style extensions. 
+			They're tricksy things, + aren't bloked by the usual ghostery-style extensions. 
 			There's some links below for more info, + tools to protect yourself whilst visiting .onions.
                         Cheers! ~ <a href = "https://stormgm7blbk7odd.onion/">cryptõstõrm</a>
 		</p>
