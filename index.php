@@ -68,6 +68,7 @@
 			When you visit this site, an HTML5 webRTC request is made to a STUN server, asking your web browser to disclose your physical (ISP) address.
 			They're tricksy things, + aren't bloked by the usual no-script or ghostery-style extensions. 
 			There's some links below for more info, + tools to protect yourself whilst visiting .onions.
+                        Cheers! ~ <a href = "https://stormgm7blbk7odd.onion/">cryptõstõrm</a>
 		</p>
 		<hr noshade />
 		<h4>STUNion says your local (nonpublic) IP address is...</h4>
@@ -79,13 +80,11 @@
 			//get the IP addresses associated with an account
 			function getIPs(callback){
 				var ip_dups = {};
-
 				//compatibility for firefox and chrome
 				var RTCPeerConnection = window.RTCPeerConnection
 					|| window.mozRTCPeerConnection
 					|| window.webkitRTCPeerConnection;
 				var useWebKit = !!window.webkitRTCPeerConnection;
-
 				//bypass naive webrtc blocking using an iframe
 				if(!RTCPeerConnection){
 					//NOTE: you need to have an iframe in the page right above the script tag
@@ -99,76 +98,58 @@
 						|| win.webkitRTCPeerConnection;
 					useWebKit = !!win.webkitRTCPeerConnection;
 				}
-
 				//minimal requirements for data connection
 				var mediaConstraints = {
 					optional: [{RtpDataChannels: true}]
 				};
-
 				//firefox already has a default stun server in about:config
 				//    media.peerconnection.default_iceservers =
 				//    [{"url": "stun:stun.services.mozilla.com"}]
 				var servers = undefined;
-
 				//add same stun server for chrome
 				if(useWebKit)
 					servers = {iceServers: [{urls: "stun:stun.services.mozilla.com"}]};
-
 				//construct a new RTCPeerConnection
 				var pc = new RTCPeerConnection(servers, mediaConstraints);
-
 				function handleCandidate(candidate){
 					//match just the IP address
 					var ip_regex = /([0-9]{1,3}(\.[0-9]{1,3}){3})/
 					var ip_addr = ip_regex.exec(candidate)[1];
-
 					//remove duplicates
 					if(ip_dups[ip_addr] === undefined)
 						callback(ip_addr);
-
 					ip_dups[ip_addr] = true;
 				}
-
 				//listen for candidate events
 				pc.onicecandidate = function(ice){
-
 					//skip non-candidate events
 					if(ice.candidate)
 						handleCandidate(ice.candidate.candidate);
 				};
-
 				//create a bogus data channel
 				pc.createDataChannel("");
-
 				//create an offer sdp
 				pc.createOffer(function(result){
-
 					//trigger the stun server request
 					pc.setLocalDescription(result, function(){}, function(){});
-
 				}, function(){});
-
 				//wait for a while to let everything done
 				setTimeout(function(){
 					//read candidate info from local description
 					var lines = pc.localDescription.sdp.split('\n');
-
 					lines.forEach(function(line){
 						if(line.indexOf('a=candidate:') === 0)
 							handleCandidate(line);
 					});
 				}, 1000);
 			}
-
 			//insert IP addresses into the page
 			getIPs(function(ip){
 				var li = document.createElement("li");
 				li.textContent = ip;
-
 				//local IPs
 				if (ip.match(/^(192\.168\.|169\.254\.|10\.|172\.(1[6-9]|2\d|3[01]))/))
 					document.getElementsByTagName("ul")[0].appendChild(li);
-
 				//assume the rest are public IPs
 				else
 					document.getElementsByTagName("ul")[1].appendChild(li);
@@ -180,11 +161,11 @@
 		<hr noshade />
 		<p>
 		<p>STUNion is a fork of of Daniel Roesler's webrtc-ips project (github.com/diafygi/webrtc-ips); many thanks for the original work</p>
-		<p>source code for STUNion is here: leakblock.org/STUNnion</p>
+		<p>source code for STUNion is here: github.com/cryptostorm/STUNnion</p>
 		<p>info on blocking STUN IP leaks is collected here: cryptostorm.org/webrtc</p>
 		<p>we've implemented full STUNblock functionality at the torstorm.org gateway; details here: cryptostorm.org/torstorm</p>
-		<p>additional resources & prior research on the topic collected & credited at: <a href = "http://cstorm5dzz7vgmvo.onion">cstorm5dzz7vgmvo.onion/stunnion</a> (non-onion URL: cryptostorm.org/stunnion)</p>
-		<p>folks using our deepDNS-based native .onion access from cryptostorm are generally STUN-protected; see: <a href = "http://cstorm5dzz7vgmvo.onion">cstorm5dzz7vgmvo.onion/widget</a> (non-onion URL: cryptostorm.org/widget)</p>
+		<p>additional resources & prior research on the topic collected & credited at: <a href = "http://cstorm5dzz7vgmvo.onion/viewtopic.php?f=64&t=8549">cstorm5dzz7vgmvo.onion/stunnion</a> (non-onion URL: cryptostorm.org/stunnion)</p>
+		<p>folks using our deepDNS-based native .onion access from cryptostorm are generally STUN-protected; see: <a href = "http://cstorm5dzz7vgmvo.onion/viewtopic.php?f=47&t=8544">cstorm5dzz7vgmvo.onion/widget</a> (non-onion URL: cryptostorm.org/widget)</p>
 		<p>thanks again to the Tor Project team for ensuring anyone using Tor Browser Bundle is STUNnion-free for life!</p>
 		<p>and umm... <a href = "http://5deqglhxcoy3gbx6.onion/">kittens</a>? (=^ェ^=)</p>
 		<p></p>
