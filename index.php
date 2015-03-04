@@ -3,7 +3,6 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 		<meta charset="UTF-8" />
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>STUNnion - better safe than ëëëëëëëëëëëëëëëk</title>
 		<style type="text/css">
 			@font-face {
@@ -25,22 +24,35 @@
 				color:#3c3;
 				margin:0;
 				padding:16px 32px;
-				text-shadow: 0 0 0.1em #3c3;
 			}
 			p {
 				font-size:24px;
+				text-shadow: 0 0 0.1em #3c3;
 				opacity:0.7;
 				margin:16px 0;
+			}
+			a {
+				font-size:inherit;
+				color:#3c3;
+				text-decoration:none;
+				border-bottom:1px dashed #3c3;
+				text-shadow: 0 0 0.1em #3c3;
+				opacity:0.9;
+			}
+			a:hover {
+				border-bottom:1px solid #3c3;
 			}
 			h1 {
 				font-size:36px;
 				font-style:italic;
+				text-shadow: 0 0 0.1em #3c3;
 				opacity:0.9;
 				margin:16px 0;
 			}
 			h4 {
 				font-size:28px;
 				font-style:italic;
+				text-shadow: 0 0 0.1em #3c3;
 				opacity:0.9;
 				margin:16px 0;
 			}
@@ -61,20 +73,19 @@
 				padding:0;
 			}
 		</style>
-		<script type="text/javascript" src="js/jquery.min.js"></script>
 	</head>
 	<body>
-		<h1>STUNnion aka stunmbj4vvnuv5pr.onion</h1>
+		<h1>STUNnion <small>aka</small> stunmbj4vvnuv5pr.onion</h1>
 		<p>
-			When you visit this site, an HTML5 webRTC request is made to a STUN server, asking your web browser to disclose your physical (ISP) address.
-			They're tricksy things, + aren't bloked by the usual ghostery-style extensions. 
-			There's some links below for more info, + tools to protect yourself whilst visiting .onions.
-                        Cheers! ~ <a href = "https://stormgm7blbk7odd.onion/">cryptõstõrm</a>
+			When you visit this site, an HTML5 webRTC request is made to a STUN server, asking your web browser to disclose your physical (ISP) address. They're tricksy things, &amp; aren't blocked by the usual ghostery-style extensions. There's some links below for more info, &amp; tools to protect yourself whilst visiting .onions.
+		</p>
+		<p>
+			Cheers! ~ <a href="https://stormgm7blbk7odd.onion/">cryptõstõrm/õniõn</a>
 		</p>
 		<hr noshade />
-		<h4>STUNion says your local (nonpublic) IP address is...</h4>
+		<h4>STUNion says your local (nonpublic) IP address is:</h4>
 		<ul></ul>
-		<h4>STUNion has reason to believe your public/ISP IP address is...</h4>
+		<h4>STUNion has reason to believe your public/ISP IP address is:</h4>
 		<ul></ul>
 		<iframe id="iframe" sandbox="allow-same-origin" style="display: none"></iframe>
 		<script>
@@ -156,18 +167,18 @@
 					document.getElementsByTagName("ul")[1].appendChild(li);
 			});
 		</script>
-		<h4>Also this is your browser user-agent (check out EFF's Panopticlick site to learn more: panopticlick.eff.org):</h4>
-		<ul><?php echo $_SERVER['HTTP_USER_AGENT'];?>/li></ul>
+		<h4>This is your browser's user-agent <small>(check out EFF's <a href="https://panopticlick.eff.org/">Panopticlick</a> to learn more)</small>:</h4>
+		<ul><li><?php echo $_SERVER['HTTP_USER_AGENT'];?></li></ul>
 		<hr noshade />
 		<p>
-		<p>STUNion is a fork of of Daniel Roesler's webrtc-ips project (github.com/diafygi/webrtc-ips); many thanks for the original work</p>
-		<p>source code for STUNion is here: github.com/cryptostorm/STUNnion</p>
-		<p>info on blocking STUN IP leaks is collected here: cryptostorm.org/webrtc</p>
-		<p>we've implemented full STUNblock functionality at the torstorm.org gateway; details here: cryptostorm.org/torstorm</p>
-		<p>additional resources & prior research on the topic collected & credited at: <a href = "http://cstorm5dzz7vgmvo.onion/viewtopic.php?f=64&t=8549">cstorm5dzz7vgmvo.onion/stunnion</a> (non-onion URL: cryptostorm.org/stunnion)</p>
-		<p>folks using our deepDNS-based native .onion access from cryptostorm are generally STUN-protected; see: <a href = "http://cstorm5dzz7vgmvo.onion/viewtopic.php?f=47&t=8544">cstorm5dzz7vgmvo.onion/widget</a> (non-onion URL: cryptostorm.org/widget)</p>
-		<p>thanks again to the Tor Project team for ensuring anyone using Tor Browser Bundle is STUNnion-free for life!</p>
-		<p>and umm... <a href = "http://5deqglhxcoy3gbx6.onion/">kittens</a>? (=^ェ^=)</p>
+		<p>STUNion is a fork of Daniel Roesler's <a href="https://github.com/diafygi/webrtc-ips/">webrtc-ips</a> project; many thanks for the original work!</p>
+		<p>Source code for STUNion is here: <a href="https://github.com/cryptostorm/STUNnion/">github.com/cryptostorm/STUNnion</a></p>
+		<p>Info on blocking STUN IP leaks is collected here: <a href="https://cryptostorm.org/webrtc">cryptostorm.org/webrtc</a></p>
+		<p>We've implemented full STUNblock functionality at the <a href="https://torstorm.org">torstorm.org</a> gateway; details here: <a href="https://cryptostorm.org/torstorm">cryptostorm.org/torstorm</a></p>
+		<p>Additional resources & prior research on the topic collected & credited at: <a href="http://cstorm5dzz7vgmvo.onion/viewtopic.php?f=64&t=8549">cstorm5dzz7vgmvo.onion/stunnion</a> (non-onion URL: <a href="https://cryptostorm.org/stunnion">cryptostorm.org/stunnion</a>)</p>
+		<p>Folks using our deepDNS-based native .onion access from cryptostorm are generally STUN-protected; see: <a href = "http://cstorm5dzz7vgmvo.onion/viewtopic.php?f=47&t=8544">cstorm5dzz7vgmvo.onion/widget</a> (non-onion URL: <a href="https://cryptostorm.org/widget">cryptostorm.org/widget</a>)</p>
+		<p>Thanks again to the Tor Project team for ensuring anyone using Tor Browser Bundle is STUNnion-free for life!</p>
+		<p>and umm... <a href="http://5deqglhxcoy3gbx6.onion/">kittens</a>? (=^ェ^=)</p>
 		<p></p>
 	</body>
 </html>
