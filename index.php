@@ -175,7 +175,7 @@
 		<p>Source code for STUNion is here: <a href="https://github.com/cryptostorm/STUNnion/">github.com/cryptostorm/STUNnion</a></p>
 		<p>Info on blocking STUN IP leaks is collected here: <a href="https://cryptostorm.org/webrtc">cryptostorm.org/webrtc</a></p>
 		<p>We've implemented full STUNblock functionality at the <a href="https://torstorm.org">torstorm.org</a> gateway; details here: <a href="https://cryptostorm.org/torstorm">cryptostorm.org/torstorm</a></p>
-		<p>Additional resources & prior research on the topic collected & credited at: <a href="http://cstorm5dzz7vgmvo.onion/viewtopic.php?f=64&t=8549">cstorm5dzz7vgmvo.onion/stunnion</a> (non-onion URL: <a href="https://cryptostorm.org/stunnion">cryptostorm.org/stunnion</a>)</p>
+		<p>Additional resources &amp; prior research on the topic collected &amp; credited at: <a href="http://cstorm5dzz7vgmvo.onion/viewtopic.php?f=64&t=8549">cstorm5dzz7vgmvo.onion/stunnion</a> (non-onion URL: <a href="https://cryptostorm.org/stunnion">cryptostorm.org/stunnion</a>)</p>
 		<p>Folks using our deepDNS-based native .onion access from cryptostorm are generally STUN-protected; see: <a href = "http://cstorm5dzz7vgmvo.onion/viewtopic.php?f=47&t=8544">cstorm5dzz7vgmvo.onion/widget</a> (non-onion URL: <a href="https://cryptostorm.org/widget">cryptostorm.org/widget</a>)</p>
 		<p>Thanks again to the Tor Project team for ensuring anyone using Tor Browser Bundle is STUNnion-free for life!</p>
 		<p>and umm... <a href="http://5deqglhxcoy3gbx6.onion/">kittens</a>? (=^ェ^=)</p>
