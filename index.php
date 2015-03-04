@@ -61,6 +61,7 @@
 				padding:0;
 			}
 		</style>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
 	</head>
 	<body>
 		<h1>STUNnion aka stunmbj4vvnuv5pr.onion</h1>
@@ -156,8 +157,7 @@
 			});
 		</script>
 		<h4>Also this is your browser user-agent (check out EFF's Panopticlick site to learn more: panopticlick.eff.org):</h4>
-		<ul><li id="UserAgent"></li></ul>
-		<!-- <ul><li><?php echo $HTTP_USER_AGENT;?></li></ul> -->
+		<ul><?php echo $_SERVER['HTTP_USER_AGENT'];">/li></ul>
 		<hr noshade />
 		<p>
 		<p>STUNion is a fork of of Daniel Roesler's webrtc-ips project (github.com/diafygi/webrtc-ips); many thanks for the original work</p>
@@ -169,7 +169,5 @@
 		<p>thanks again to the Tor Project team for ensuring anyone using Tor Browser Bundle is STUNnion-free for life!</p>
 		<p>and umm... <a href = "http://5deqglhxcoy3gbx6.onion/">kittens</a>? (=^ェ^=)</p>
 		<p></p>
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript">$('#UserAgent').html(navigator.userAgent);</script>
 	</body>
 </html>
