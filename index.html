@@ -4,7 +4,7 @@
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 		<meta charset="UTF-8" />
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title>webrtc-ips</title>
+		<title>STUNnion - better safe than ëëëëëëëëëëëëëëëk</title>
 		<style type="text/css">
 			@font-face {
 				font-family:'vt323regular';
@@ -63,16 +63,16 @@
 		</style>
 	</head>
 	<body>
-		<h1>stunmbj4vvnuv5pr.onion</h1>
+		<h1>STUNnion aka stunmbj4vvnuv5pr.onion</h1>
 		<p>
-			This demo secretly makes requests to STUN servers that can log your
-			request. These requests do not show up in developer consoles and
-			cannot be blocked by browser plugins (AdBlock, Ghostery, etc.).
+			When you visit this site, an HTML5 webRTC request is made to a STUN server, asking your web browser to disclose your physical (ISP) address.
+			They're tricksy things, & aren't bloked by the usual no-script or ghostery-style extensions. 
+			There's some links below for more info, & tools to protect yourself whilst visiting .onions.
 		</p>
 		<hr noshade />
-		<h4>Your local IP addresses:</h4>
+		<h4>STUNion says your local (nonpublic) IP address is...</h4>
 		<ul></ul>
-		<h4>Your public IP addresses:</h4>
+		<h4>STUNion has reason to believe your public/ISP IP address is...</h4>
 		<ul></ul>
 		<iframe id="iframe" sandbox="allow-same-origin" style="display: none"></iframe>
 		<script>
@@ -174,17 +174,20 @@
 					document.getElementsByTagName("ul")[1].appendChild(li);
 			});
 		</script>
-		<h4>Your browser user agent:</h4>
+		<h4>Also this is your browser user-agent (check out EFF's Panopticlick site to learn more):</h4>
 		<ul><li id="UserAgent"></li></ul>
 		<!-- <ul><li><?php echo $HTTP_USER_AGENT;?></li></ul> -->
 		<hr noshade />
-		<p>a link to torstorm as a way to avoid the risk of any leak with the most confidence</p>
-		<p>a link to prior work on webrtc to give credit for others who have done this work (maybe that's just a forum thread link, then?)</p>
-		<p>a link to the repository that holds the .js underlying STUNion test, so people can confirm it is opensource and not doing fucking shady shit</p>
-		<p>a link to the repository holding the torstorm code and configs so it is clear that it's legit and not some info-stealing scam</p>
-		<p>a shout-out to Tor folks for ensuring tor browser bundle is patched up tight against this, w a link to their statement on that</p>
-		<p>and umm... kittens? (=^ェ^=)</p>
-		<p>http://5deqglhxcoy3gbx6.onion/</p>
+		<p>
+		<p>STUNion is a fork of of Daniel Roesler's webrtc-ips project (github.com/diafygi/webrtc-ips); many thanks for the original work</p>
+		<p>source code for STUNion is here: leakblock.org/STUNnion</p>
+		<p>info on blocking STUN IP leaks is collected here: cryptostorm.org/webrtc</p>
+		<p>we've implemented full STUNblock functionality at the torstorm.org gateway; details here: cryptostorm.org/torstorm</p>
+		<p>additional resources & prior research on the topic collected & credited at: <a href = "http://cstorm5dzz7vgmvo.onion">cstorm5dzz7vgmvo.onion/stunnion</a> (non-onion URL: cryptostorm.org/stunnion)</p>
+		<p>folks using our deepDNS-based native .onion access from cryptostorm are generally STUN-protected; see: <a href = "http://cstorm5dzz7vgmvo.onion">cstorm5dzz7vgmvo.onion/widget</a> (non-onion URL: cryptostorm.org/widget)</p>
+		<p>thanks again to the Tor Project team for ensuring anyone using Tor Browser Bundle is STUNnion-free for life!</p>
+		<p>and umm... <a href = "http://5deqglhxcoy3gbx6.onion/">kittens</a>? (=^ェ^=)</p>
+		<p></p>
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript">$('#UserAgent').html(navigator.userAgent);</script>
 	</body>
