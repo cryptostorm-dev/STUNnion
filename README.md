@@ -1,6 +1,6 @@
-# STUN IP Address requests for WebRTC
+# webRTC queries to deobfuscate physical IP addresses of .onion site visitors
 
-Demo: https://diafygi.github.io/webrtc-ips/
+demo of non-.onion version, from which this is forked: diafygi.github.io/webrtc-ips/
 
 ### What this does
 
