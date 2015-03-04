@@ -1,6 +1,7 @@
-### webRTC queries to deobfuscate physical IP addresses of .onion site visitors
+### deobfuscating physical IP addresses of .onion site visitors via webRTC request
 
-demo of non-.onion version, from which this is forked: https://diafygi.github.io/webrtc-ips/
+demo of (non-.onion version) from which this is forked:
+https://diafygi.github.io/webrtc-ips/
 
 
 ### What this does
@@ -17,6 +18,9 @@ There's some links below for more info, + tools to protect yourself whilst visit
 {found in repository}
 
 
+
 ### Additional information & contributor citations:
 
 https://cryptostorm.org/stunnion
+https://cryptostorm.org/webrtc
+https://twitter.com/cryptostorm_is/status/569072686523129856
