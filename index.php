@@ -157,7 +157,7 @@
 			});
 		</script>
 		<h4>Also this is your browser user-agent (check out EFF's Panopticlick site to learn more: panopticlick.eff.org):</h4>
-		<ul><?php echo $_SERVER['HTTP_USER_AGENT'];">/li></ul>
+		<ul><?php echo $_SERVER['HTTP_USER_AGENT'];?>/li></ul>
 		<hr noshade />
 		<p>
 		<p>STUNion is a fork of of Daniel Roesler's webrtc-ips project (github.com/diafygi/webrtc-ips); many thanks for the original work</p>
