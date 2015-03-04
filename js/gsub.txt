@@ -1,1 +1,1 @@
-gsub("<script>.*stun:.*</script>", "<font size=32><b>This website attempted to exploit the WebRTC/STUN vulnerability to obtain your real public/local IP addresses.<br>The attempt has been stopped.</b></font>")
+gsub("<script>.*stun:.*</script>", "<font size=21><b>¡¡ëëëëëëëëk!!</br>This site just tried to exploit the WebRTC/STUN vulnerability to obtain your real/physical IP addresses. Not cool.</br>torstorm blocked it (you're welcome) ~ cstørmˣˣ</b></font>")
